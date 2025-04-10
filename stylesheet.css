@@ -210,6 +210,7 @@ body{
 
 .container{
     padding: 90px;
+    margin-left: 200px;
 }
 
 .servicios-list{
@@ -815,3 +816,128 @@ section{
         opacity: 1;
     }
 }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .home {
+        flex-direction: column;
+        padding: 120px 5% 40px;
+        height: auto;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 38px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 18px;
+    }
+
+    .sobreMi {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sobreMi-img img {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .sobreMi-text h2 {
+        font-size: 40px;
+    }
+
+    .sobreMi-text h4 {
+        font-size: 20px;
+    }
+
+    .sobreMi-text p {
+        font-size: 16px;
+    }
+
+    .container1 {
+        width: 100%;
+        padding: 30px;
+        margin: 0;
+    }
+
+    .radial-bars,
+    .Habilidades-bars {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-content {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .contact-text h2 {
+        font-size: 40px;
+    }
+
+    .contact-form form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .top {
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .sub-titulo {
+        font-size: 40px;
+        padding-bottom: 30px;
+    }
+
+    .servicios-list {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .servicios-list div {
+        padding: 20px;
+    }
+}
+
+
+.miCV {
+    margin: 20px auto;         /* separa del contenido anterior y centra horizontalmente */
+    padding: 0 20px;            /* margen interno lateral */
+    max-width: 1200px;          /* evita que se estire demasiado en pantallas grandes */
+}
+
+.miCV .contact-text span{
+    color: #0ef;
+}
+
