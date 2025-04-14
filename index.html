@@ -9,12 +9,22 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0BNY0BDSV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-W0BNY0BDSV');
+    </script>
 </head>
 <body>
     <header class="header">
+        <i class='bx bx-menu' id="menu-icon"></i> 
         <a href="#" class="logo">Portafolio</a>
-
-        <nav class="navbar">
+        
+        <nav class="navbar" id="navbar">
             <a href="#home" style="--i:1" class="active">Incio</a>
             <a href="#sobreMi" style="--i:2">Sobre mí</a>
             <a href="#servicios" style="--i:3">Skill</a>
@@ -195,11 +205,10 @@
         </div>
     </div>
     </section>
-
+    <h1 class="sub-titulo">Últimos <span>Proyectos</span></h1>
     <section>
         <div class="portfolio" id="portfolio">
-            <div class="main-text" id="proyecto">
-                <h2>Últimos <span>Proyectos</span></h2>
+            <div id="proyecto">
 
                 <div class="portfolio-content">
                     <div class="row">
@@ -297,5 +306,13 @@
     </div>
     <a href="#" class="top"><i class='bx bx-up-arrow-alt' ></i></i></a>
     <script src="main.js"></script>
+    <script>
+        const menuIcon = document.querySelector('#menu-icon');
+        const navbar = document.querySelector('#navbar');
+    
+        menuIcon.onclick = () => {
+            navbar.classList.toggle('active');
+        };
+    </script>
 </body>
 </html>

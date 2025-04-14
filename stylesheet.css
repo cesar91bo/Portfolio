@@ -66,6 +66,14 @@ body{
     padding:  70px 10% 0;
 }
 
+@media screen and (max-width: 768px) {
+    .home {
+        background: #081b29; /* o cualquier color que haga contraste */
+        background-image: none; /* opcional, para asegurarte que se quite */
+        color: white; /* si necesitás mantener el texto visible */
+    }
+}
+
 .home-content{
     max-width: 600px;
 }
@@ -210,7 +218,7 @@ body{
 
 .container{
     padding: 90px;
-    margin-left: 200px;
+    justify-content: center;
 }
 
 .servicios-list{
@@ -281,13 +289,22 @@ body{
 section{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container1{
-    width: 800px;
-    height: 500px;
+    width: 600px;
+    height: auto;
     padding: 75px 90px;
-    margin-left: 120px;
+    margin: 50px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container1 {
+        width: 100%;
+        padding: 40px 20px;
+        height: auto;
+    }
 }
 
 .heading1{
@@ -555,7 +572,7 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));
     justify-content: center; /* <-- centra las columnas horizontalmente */
-    gap: 30px; /* opcional, da espacio entre elementos */
+    gap: 10px; /* opcional, da espacio entre elementos */
 }
 
 .row{
@@ -817,19 +834,41 @@ section{
     }
 }
 
+#menu-icon {
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+}
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
 
+    #menu-icon {
+        display: block;
+        position: static; /* ya no lo posicionamos de forma absoluta */
+        order: 0;
+        margin-right: 10px;
+    }
     .header {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 5%;
+        flex-direction: row;
+        justify-content: flex-start; /* alinea a la izquierda */
     }
 
     .navbar {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        background: #051129; /* color de fondo del menú */
+        padding: 25px;
+        border-radius: 10px;
         flex-direction: column;
-        align-items: center;
-        width: 100%;
+        gap: 10px;
+    }
+
+    .navbar.active {
+        display: flex;
     }
 
     .navbar a {
